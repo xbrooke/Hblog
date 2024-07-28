@@ -2304,25 +2304,6 @@ span.tags-punctuation i {
   border-width: 0;
   border-top: 1px dashed var(--efu-theme-op);
 }
-@media (max-width: 768px) {
-  .post #article-container {
-    padding: 1rem 1rem;
-  }
-}
-.og-image-container {
-  position: relative;
-  width: 100%;
-  padding-top: 100%; /* 使容器成为 1:1 的比例 */
-  overflow: hidden;
-}
-.og-image-container img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: auto;
-  transform: translate(-50%, -50%);
-}
 .article-sort-title {
   font-weight: 700;
   font-size: 2em;
