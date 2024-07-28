@@ -152,6 +152,13 @@
   </url>
   
   <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2024-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-07-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -160,13 +167,6 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/tags/%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2024-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2024-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -2200,7 +2200,7 @@ span.tags-punctuation i {
   object-fit: cover;
   display: block;
   margin: 0.8rem auto;
-  max-width: 90%;
+  max-width: 100%;
   max-height: 450px;
 }
 #article-container ul,
@@ -2303,6 +2303,25 @@ span.tags-punctuation i {
   margin: 0.5rem 0;
   border-width: 0;
   border-top: 1px dashed var(--efu-theme-op);
+}
+@media (max-width: 768px) {
+  .post #article-container {
+    padding: 1rem 1rem;
+  }
+}
+.og-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 使容器成为 1:1 的比例 */
+  overflow: hidden;
+}
+.og-image-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 .article-sort-title {
   font-weight: 700;
@@ -7675,7 +7694,8 @@ div#banners .bannerText {
 @media screen and (max-width: 768px) {
   #post .post-copyright {
     box-shadow: var(--efu-shadow-border);
-    padding: 1rem 1.3rem;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem 0.5rem /* 手机端的边距调整为1rem上下和1rem左右 */;
   }
 }
 #post .post-copyright .post-copyright__author_group .post-copyright__author_img {
@@ -8674,7 +8694,12 @@ div#banners .bannerText {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 2rem;
+  padding: 0 2rem /* 默认的左右边距为2rem */;
+}
+@media (max-width: 768px) {
+  #post .post-tools-right {
+    padding: 0 1rem /* 手机端的左右边距设置为0.8rem */;
+  }
 }
 #post .post-tools-right .tag_share .post-meta__tag-list {
   display: flex;
@@ -10816,19 +10841,27 @@ div.timenode:hover .meta:after {
 #post-comment > div.comment-head > div.comment-privacy a:hover {
   color: var(--efu-main);
 }
-#post-comment blockquote {
-  background: var(--efu-secondbg);
-  border: var(--style-border);
-  box-shadow: none;
-  margin: 0 0 0.5rem;
-  font-size: 0.6rem;
-  color: var(--efu-secondtext);
-  border-radius: 8px;
-}
-#post-comment .comment-head {
-  font-size: 0.8em;
-  margin: 0.5rem 0;
-  position: relative;
+@media (max-width: 768px) {
+  .post #post-comment {
+    padding: 0 1rem /* 手机端左右内边距设置为0.8rem */;
+  }
+  #post-comment > div.comment-head > div.comment-privacy {
+    margin-left: 1rem /* 手机端左外边距设置为0.8rem */;
+  }
+  blockquote {
+    background: var(--efu-secondbg);
+    border: var(--style-border);
+    box-shadow: none;
+    margin: 0 0 0.5rem;
+    font-size: 0.6rem;
+    color: var(--efu-secondtext);
+    border-radius: 8px;
+  }
+  .comment-head {
+    font-size: 0.8em;
+    margin: 0.5rem 0;
+    position: relative;
+  }
 }
 #owo-big {
   position: fixed;
