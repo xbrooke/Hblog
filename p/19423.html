@@ -1,0 +1,493 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="baidu-site-verification" content="codeva-bxr6CnBRIt"><meta name="google-site-verification" content="jZnKwQzKQVYqo0z7H09z4yL_XGJ0l0FqmHJ81vuTQXA"><title>网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端 | 徐大兵</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=2.0.3"><!-- inject head--><link rel="canonical" href="https://hblog.xbrooke.cn/p/19423.html"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><!-- 检查是否启用 OpenGraph--><!-- 使用 OpenGraph 插件生成 meta 标签--><meta name="description" content="网易Filmly推出WebDAV功能，支持iOS、安卓、TV端设备，通过整合Alist网盘，实现多平台资源访问。本文提供Filmly功能介绍和Alist部署教程，助你轻松管理和观看高品质影视资源。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网易Filmly已上线WebDAV功能，支持iOS&#x2F;安卓&#x2F;TV端">
+<meta property="og:url" content="https://hblog.xbrooke.cn/p/19423.html">
+<meta property="og:site_name" content="徐大兵">
+<meta property="og:description" content="网易Filmly推出WebDAV功能，支持iOS、安卓、TV端设备，通过整合Alist网盘，实现多平台资源访问。本文提供Filmly功能介绍和Alist部署教程，助你轻松管理和观看高品质影视资源。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%BA%91%E7%9B%98%E6%92%AD%E6%94%BE.jpg">
+<meta property="article:published_time" content="2024-07-29T14:45:38.000Z">
+<meta property="article:modified_time" content="2024-07-29T15:00:48.877Z">
+<meta property="article:author" content="徐大兵">
+<meta property="article:tag" content="软件教程">
+<meta property="article:tag" content="Alisr网盘搭建">
+<meta property="article:tag" content="影音播放">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%BA%91%E7%9B%98%E6%92%AD%E6%94%BE.jpg"><!-- 添加 OpenGraph meta 标签--><meta property="og:title" content="网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端"><meta property="og:description" content="网易Filmly推出WebDAV功能，支持iOS、安卓、TV端设备，通过整合Alist网盘，实现多平台资源访问。本文提供Filmly功能介绍和Alist部署教程，助你轻松管理和观看高品质影视资源。"><meta property="og:type" content="article"><meta property="og:image" content="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%BA%91%E7%9B%98%E6%92%AD%E6%94%BE.jpg"><meta property="og:url" content="https://hblog.xbrooke.cn/p/19423.html"><meta property="og:site_name" content="徐大兵"><!-- 添加 Twitter meta 标签--><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端"><meta name="twitter:description" content="网易Filmly推出WebDAV功能，支持iOS、安卓、TV端设备，通过整合Alist网盘，实现多平台资源访问。本文提供Filmly功能介绍和Alist部署教程，助你轻松管理和观看高品质影视资源。"><meta name="twitter:image" content="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%BA%91%E7%9B%98%E6%92%AD%E6%94%BE.jpg"><!-- 生成描述 meta 标签--><meta name="description" content="网易Filmly推出WebDAV功能，支持iOS、安卓、TV端设备，通过整合Alist网盘，实现多平台资源访问。本文提供Filmly功能介绍和Alist部署教程，助你轻松管理和观看高品质影视资源。"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="徐大兵"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(' %c Solitude %c ' + '2.0.3' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: {"appId":"A5O3F6RRMZ","apiKey":"01c9dc5afb5194da4390af8d0c517799","indexName":"xhexo","hits":{"per_page":10}},
+    localsearch: undefined,
+    runtime: '2024-07-18 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。"},"barrage":{"title":"热评"}},
+    aside: {
+        sayhello: {
+            morning: "✨ 一日之计在于晨",
+            noon: "饱了才有力气干活",
+            afternoon: "集中精力，攻克难关🍵",
+            night: "不要太劳累了，早睡更健康",
+            goodnight: "Good night 😴",
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {"avatar":"https://cravatar.cn","commentBarrage":true},
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+    lure: false,
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fa-solid fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude fa-solid fa-circle-chevron-right"></i></a></div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /<img class="tk-owo-emotion" [^>]+>/g
+    let cache = utils.saveToLocal.get('twikoo-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+
+    await fetch('https://twikoo.xbrooke.cn/', {
+        method: "POST",
+        body: JSON.stringify({
+            "event": "GET_RECENT_COMMENTS",
+            "includeReply": true,
+            "pageSize": 6
+        }),
+        headers: {'Content-Type': 'application/json'}
+    }).then(res => res.json()).then(async ({data}) => {
+        for (const i of data) {
+            if (i.avatar === undefined) i.avatar = '/avatar/d615d5793929e8c7d70eab5f00f7f5f1?d=mp'
+            let title = ''
+            if (i.url) {
+                await fetch(i.url).then(res => res.text()).then(html => {
+                    const parser = new DOMParser()
+                    const doc = parser.parseFromString(html, 'text/html')
+                    title = doc.querySelector('title').innerText
+                }).catch(() => {
+                    title = i.url
+                })
+            }
+            if (title.indexOf('|') > 0) {
+                title = title.split('|')[0]
+            }
+            ls.push({
+                avatar: i.avatar,
+                nick: i.nick,
+                title: title,
+                content: i.comment,
+                url: i.url + '#' + i.id,
+                time: i.created
+            })
+        }
+        setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+        utils.saveToLocal.set('twikoo-recent-comments-console', ls, 0.2)
+    });
+
+    function setHtml(el, data) {
+        el.innerHTML = data.map(i => `
+            <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                <div class="comment-info">
+                    <img src="${i.avatar}" class="nolazyload" alt="${i.nick}">
+                    <div>
+                        <span class="comment-user">${i.nick}</span>
+                    </div>
+                    <time class="comment-time" datetime="${new Date(i.time)}"></time>
+                </div>
+                <div class="comment-content">${formatContent(i.content)}</div>
+                <div class="comment-title">
+                <i class="solitude fa-solid fa-comment"></i>
+                ${i.title}</div>
+            </div>
+        `).join('')
+        if (typeof sco !== 'undefined') sco.changeTimeFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => sco.changeTimeFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => sco.changeTimeFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '表情')
+        content = content.replace(/<\/*br>|[\s\uFEFF\xA0]+/g, '');
+        content = content.replace(/<img.*?>/g, '[图片]');
+        content = content.replace(/<a.*?>.*?<\/a>/g, '[链接]');
+        content = content.replace(/<pre.*?>.*?<\/pre>/g, '[代码]');
+        content = content.replace(/<.*?>/g, '');
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/OSN/">OSN<sup>2</sup></a><a href="/tags/App%E5%AE%89%E8%A3%85/">App安装<sup>2</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决<sup>1</sup></a><a href="/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/">领克车机<sup>5</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/">车机教程<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">应用商店<sup>1</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/">车机软件<sup>1</sup></a><a href="/tags/%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6/">导航软件<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/">软件教程<sup>1</sup></a><a href="/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/">Alisr网盘搭建<sup>1</sup></a><a href="/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/">影音播放<sup>1</sup></a><a href="/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/">安装设置<sup>1</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序<sup>2</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E5%8C%85%E5%90%8D/">常用包名<sup>1</sup></a><a href="/tags/APP%E5%8C%85%E5%90%8D/">APP包名<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">2024/07</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fa-solid fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fa-solid fa-mattress-pillow"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude fa-solid fa-comment"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fa-solid fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span>关于本站</span></a></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/OSN/">OSN<sup>2</sup></a><a href="/tags/App%E5%AE%89%E8%A3%85/">App安装<sup>2</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决<sup>1</sup></a><a href="/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/">领克车机<sup>5</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/">车机教程<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">应用商店<sup>1</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/">车机软件<sup>1</sup></a><a href="/tags/%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6/">导航软件<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/">软件教程<sup>1</sup></a><a href="/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/">Alisr网盘搭建<sup>1</sup></a><a href="/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/">影音播放<sup>1</sup></a><a href="/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/">安装设置<sup>1</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序<sup>2</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E5%8C%85%E5%90%8D/">常用包名<sup>1</sup></a><a href="/tags/APP%E5%8C%85%E5%90%8D/">APP包名<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><span class="title">Brooke</span><i class="solitude fa-solid fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span>关于本站</span></a></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fa-solid fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fa-solid fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fa-solid fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fa-solid fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%BA%91%E7%9B%98%E6%92%AD%E6%94%BE.jpg" alt="网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>软件教程</span></a><a class="post-meta__tags" href="/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>Alisr网盘搭建</span></a><a class="post-meta__tags" href="/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>影音播放</span></a></div></div></div></div><h1 class="post-title">网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-07-29 22:45:38"><i class="post-meta-icon solitude fa-solid fa-calendar-days"></i><time datetime="2024-07-29T14:45:38.000Z">2024-07-29T14:45:38.000Z</time></span><span class="post-meta-date" title="最后更新于 2024-07-29 23:00:48"><i class="post-meta-icon solitude fa-solid fa-arrow-rotate-right"></i><time datetime="2024-07-29T15:00:48.877Z">2024-07-29T15:00:48.877Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fa-solid fa-file-word" title="文章字数"></i><span class="word-count">1.3k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fa-solid fa-clock" title="阅读耗时"></i><span>4 min</span></span><span class="post-meta-position" title="作者IP归属地为深圳"><i class="post-meta-icon solitude fa-solid fa-map"></i><span>深圳</span></span><a class="post-meta-pv" href="/p/19423.html" title="文章热度"><i class="post-meta-icon solitude fa-solid fa-fire-flame-curved"></i><span id="busuanzi_page_pv"><i class="solitude fa-solid fa-spinner"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fa-solid fa-comment"></i><a href="/p/19423.html#post-comment"><span class="twikoo-count"><i class="solitude fa-solid fa-spinner"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>作为一个资深影迷，我不知道大家平时有什么休闲娱乐的方式？你是喜欢宅在家里吹着空调，喝着快乐水，一边刷短视频玩游戏，还是喜欢和亲友外出旅游，领略大好河山呢？</p>
+<p>对于我来说，看剧是首选。理由很简单，看剧不受时间和地点的限制，而且几乎没有成本。</p>
+<p>看剧设备也很灵活，投影仪、电脑、平板、手机都可以成为观影神器。</p>
+<p>对于许多使用 NAS 的朋友而言，影音需求通常是首要考虑的。为了获得良好的影音体验，选择一款优秀的影音播放工具是基本操作。</p>
+<p>最近，阿里云开始对“第三方应用权益”进行收费，这对许多用户来说是一个挑战。而此时，网易推出了其媒体库播放器应用“网易 Filmly”，并上线了 WebDAV 功能，为用户提供了更多接入方式。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E7%BD%91%E9%A1%B5%E6%88%AA%E5%9B%BE.jpg" alt="网页截图"></p>
+<h2 id="网易-Filmly-V1-3-0-更新内容"><a href="#网易-Filmly-V1-3-0-更新内容" class="headerlink" title="网易 Filmly V1.3.0 更新内容"></a><strong>网易 Filmly V1.3.0 更新内容</strong></h2><ol>
+<li><strong>新增令人期待的 WebDAV 功能</strong>，连接 WebDAV 后可随时随地畅享海量高品质影片。</li>
+<li><strong>优化网盘刮削机制</strong>，提升刮削稳定性。</li>
+<li><strong>优化首页刮削提示</strong>，资源数量和任务状态展示更清晰。</li>
+<li><strong>修复外挂字幕失效问题</strong>。</li>
+<li><strong>修复部分兼容性问题</strong>。</li>
+</ol>
+<hr>
+<p><strong>接下来，我们来看看如何在 Windows 上部署 Alist 网盘。</strong></p>
+<h2 id="下载-Alist"><a href="#下载-Alist" class="headerlink" title="下载 Alist"></a>下载 Alist</h2><ol>
+<li><p>在 GitHub 上下载 Alist 压缩包，根据自己的系统选择 32 位或 64 位版本进行下载。  <a target="_blank" rel="noopener" href="https://github.com/alist-org/alist">点击下载</a></p>
+<table>
+<thead>
+<tr>
+<th>软件包名称</th>
+<th>对应系统版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alist-windows-386.zip</td>
+<td>Windows 32 位系统</td>
+</tr>
+<tr>
+<td>alist-windows-amd64.zip</td>
+<td>Windows 64 位系统</td>
+</tr>
+<tr>
+<td>alist-windows-amd64-upx.zip</td>
+<td>Windows 64 位系统(upx 压缩)</td>
+</tr>
+<tr>
+<td>alist-windows-arm64.zip</td>
+<td>Windows arm64 架构系统</td>
+</tr>
+</tbody></table>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/alist-github%E9%A1%B5%E9%9D%A2.jpg" alt="alist-github页面"></p>
+</li>
+<li><p>点击 Releases，进入下载页面：</p>
+</li>
+</ol>
+<p>   <img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.jpg" alt="下载页面"></p>
+<p> 向下滚动，找到 Windows 的 zip 包，根据自己的系统版本选择对应的版本（此处以 alist-windows-amd64.zip 为例）。</p>
+<blockquote>
+<p>如何查看自己系统的位数？按下 <code>Win(徽标键)+R</code>，输入 <code>cmd</code>，然后在命令行窗口中输入：<code>wmic os get osarchitecture</code></p>
+</blockquote>
+<h2 id="安装-Alist-网盘服务"><a href="#安装-Alist-网盘服务" class="headerlink" title="安装 Alist 网盘服务"></a>安装 Alist 网盘服务</h2><ol>
+<li><p>根据你的储存需求，在磁盘中创建一个名为 <code>alist</code> 的文件夹。解压下载的压缩包，并将其内容解压到该文件夹中。你会看到一个名为 <code>alist.exe</code> 的文件，如下图所示：</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E6%96%87%E4%BB%B6%E5%A4%B9.jpg" alt="文件夹"></p>
+</li>
+<li><p>在文件夹地址栏中输入 <code>cmd</code>，然后按 Enter 键打开命令行窗口，以确保命令行的当前目录是 Alist 程序所在目录。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E8%BE%93%E5%85%A5cmd.jpg" alt="输入cmd"></p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E8%B7%B3%E5%87%BAcmd%E9%A1%B5%E9%9D%A2.jpg" alt="跳出cmd页面"></p>
+</li>
+<li><p>在命令行窗口中输入以下命令并回车运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alist server</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E8%BE%93%E5%85%A5alise%20server.jpg" alt="输入alise server"></p>
+<p>运行 Alist 后，首次启动时会生成初始密码，并在同目录下创建一个名为 <code>data</code> 的文件夹，其中保存 Alist 的数据库、配置文件、日志等文件。（如果 Windows 安全中心弹出警告，请点击“允许访问”）</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E5%AF%86%E7%A0%81.jpg" alt="密码"></p>
+<p>账号名称为：admin，密码为 <code>password</code> 后面的字符（请复制此密码，稍后会用到）。</p>
+</li>
+<li><p>此时，先不要关闭命令行窗口。打开常用的浏览器，输入以下地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:5244 或者 192.168.31.74:5244（你的局域网 IP）</span><br></pre></td></tr></table></figure>
+
+<p>输入地址后，登录 Alist：</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E8%BE%93%E5%85%A5%E5%9C%B0%E5%9D%80.jpg" alt="输入地址"></p>
+<p>默认账号是 <code>admin</code>，密码是刚才储存的初始密码，可以右键直接复制：</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E8%BE%93%E5%85%A5%E5%88%9A%E6%89%8D%E7%9A%84%E5%AF%86%E7%A0%81.jpg" alt="输入刚才的密码"></p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E7%99%BB%E5%85%A5%E7%AE%A1%E7%90%86.jpg" alt="登入管理"></p>
+<p>在后台，你可以修改用户名、密码，查看程序版本，设置网站标题、公告等等，根据自己的需求进行设置。</p>
+</li>
+</ol>
+<h2 id="挂载网盘"><a href="#挂载网盘" class="headerlink" title="挂载网盘"></a>挂载网盘</h2><p>目前，Alist 支持众多主流网盘，如百度网盘、阿里云网盘、夸克网盘、115 网盘等。具体详情请查看 <a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/webdav.html#webdav-%E9%85%8D%E7%BD%AE">官方文档</a>。</p>
+<ol>
+<li><p>登录 Alist 管理后台，找到“储存”选项，添加对应的网盘（本文以夸克网盘为例）。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E6%B7%BB%E5%8A%A0%E5%82%A8%E5%AD%98.jpg" alt="添加储存"></p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E9%80%89%E6%8B%A9%E6%8C%82%E8%BD%BD%E7%9A%84%E7%BD%91%E7%9B%98.jpg" alt="选择挂载的网盘"></p>
+</li>
+<li><p>挂载路径填写为 <code>/夸克网盘</code>，序号为 <code>1</code>。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/image-20240729162947020.png" alt="image-20240729162947020"></p>
+</li>
+<li><p>挂载夸克网盘需要在网页端登录夸克网盘，获取 Cookie。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E5%A4%B8%E5%85%8B.jpg" alt="夸克"></p>
+</li>
+<li><p>在键盘上按 F12 进入开发者模式，找到 <code>网络</code>，刷新网页，找到 <code>sort?</code> 开头的文件，点击进去，找到 Cookie 并复制对应部分的内容。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/coker.jpg" alt="coker"></p>
+</li>
+<li><p>将对应的 Cookie 粘贴到相应的区域，然后点击保存。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E8%BE%93%E5%85%A5coker.jpg" alt="输入coker"></p>
+</li>
+<li><p>此时，夸克网盘已成功挂载到 Al</p>
+</li>
+</ol>
+<p>ist，其他网盘的挂载方法请查看 <a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/drivers/common.html">官方文档</a>。</p>
+<p>   <img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E6%8C%82%E8%BD%BD.jpg" alt="挂载"></p>
+<p>   <img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8Balist%E4%B8%BB%E9%A1%B5%E4%BA%86.jpg" alt="就可以看alist主页了"></p>
+<h2 id="Filmly-连接-WebDAV"><a href="#Filmly-连接-WebDAV" class="headerlink" title="Filmly 连接 WebDAV"></a>Filmly 连接 WebDAV</h2><ol>
+<li><p>请将 Windows 防火墙关闭或将 Alist 添加到白名单（这一步尤其重要，否则无法在局域网内登录 Alist）。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E5%85%81%E8%AE%B8%E9%98%B2%E7%81%AB%E5%A2%99.jpg" alt="允许防火墙"></p>
+</li>
+<li><p>打开 Filmly，添加新资源，选择“从 WebDAV 导入”。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/b87d0d89-e261-44d9-84e6-57f9ded26e27.jpg" alt="b87d0d89-e261-44d9-84e6-57f9ded26e27"></p>
+</li>
+<li><p>地址填写为部署 Alist 的电脑局域网 IP，如（192.168.31.74），端口填写 <code>5244</code>，用户名和密码填写你刚才的 Alist 登录账号和密码，路径填写为 <code>/dav</code>，确认添加即可。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/95f35a0c-de00-4d90-bb23-80138f6c2bea.jpg" alt="95f35a0c-de00-4d90-bb23-80138f6c2bea"></p>
+</li>
+<li><p>选择添加夸克网盘。如果添加了多个网盘，请根据需要选择对应的网盘。</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/cb8d4beb-48b9-48d7-9639-f6e416e7a872.jpg" alt="cb8d4beb-48b9-48d7-9639-f6e416e7a872"></p>
+</li>
+<li><p>此时，挂载的夸克网盘正在扫描并刮削，快去享受 Filmly 带来的快乐吧！</p>
+<p><img src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/150637bf-7b35-40ef-b408-e7e07ccc0866.jpg" alt="150637bf-7b35-40ef-b408-e7e07ccc0866"></p>
+</li>
+</ol>
+<h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><a target="_blank" rel="noopener" href="https://filmly.163.com/download/">官方下载</a></p>
+<p>已支持安卓 TV、安卓手机、iPhone、iPad。</p>
+<hr>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/wqAVqYPyJlV7nVFpujQxiA">Windows 系统安装 AList 教程之一</a></p>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="https://img.xbrooke.cn/file/199753263dae693f8b87d.png"></a><div class="post-copyright__author_name">徐大兵</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fa-solid fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏。</span><ul class="reward-group"><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://img.xbrooke.cn/file/e811837334f0488479533.jpg" alt="支付宝" style="border-color: var(--efu-purple)"></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://img.xbrooke.cn/file/9b6f49a45af6b0de443a0.jpg" alt="微信" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">微信</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">因为有你们的支持，我才体会到写文章的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://hblog.xbrooke.cn/p/19423.html&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), 'https://hblog.xbrooke.cn/p/19423.html');
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), 'https://hblog.xbrooke.cn/p/19423.html');
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">徐大兵</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>软件教程<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>Alisr网盘搭建<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>影音播放<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/p/ab29.html"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">领克OSN安装第三方应用，使用领克01/03/05</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fa-solid fa-comment"></i><span> 评论</span><span class="count"> (<span class="twikoo-count"><i class="solitude fa-solid fa-spinner"></i></span>)</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="https://img.xbrooke.cn/file/199753263dae693f8b87d.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">徐大兵</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/xbrooke" title="Github"><i class="solitude  fab fa-github"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fa-solid fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E6%98%93-Filmly-V1-3-0-%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9"><span class="toc-text">网易 Filmly V1.3.0 更新内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-Alist"><span class="toc-text">下载 Alist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Alist-%E7%BD%91%E7%9B%98%E6%9C%8D%E5%8A%A1"><span class="toc-text">安装 Alist 网盘服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%82%E8%BD%BD%E7%BD%91%E7%9B%98"><span class="toc-text">挂载网盘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filmly-%E8%BF%9E%E6%8E%A5-WebDAV"><span class="toc-text">Filmly 连接 WebDAV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="toc-text">下载地址</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fa-solid fa-map"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/19423.html" title="网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端"><img alt="网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端" src="https://hblog-1311962554.cos.ap-guangzhou.myqcloud.com/xb/%E4%BA%91%E7%9B%98%E6%92%AD%E6%94%BE.jpg"></a><div class="content"><span class="title" href="/p/19423.html" title="网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端">网易Filmly已上线WebDAV功能，支持iOS/安卓/TV端</span><span class="article-recent_post_categories" href="/p/19423.html">软件</span></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/ab29.html" title="领克OSN安装第三方应用，使用领克01/03/05"><img alt="领克OSN安装第三方应用，使用领克01/03/05" src="https://img.xbrooke.cn/file/d69cd9ab88571b6d02ec4.jpg"></a><div class="content"><span class="title" href="/p/ab29.html" title="领克OSN安装第三方应用，使用领克01/03/05">领克OSN安装第三方应用，使用领克01/03/05</span><span class="article-recent_post_categories" href="/p/ab29.html">领克OSN</span></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/1676.html" title="领克车机常用包名 适合爱折腾有基础的车友食用"><img alt="领克车机常用包名 适合爱折腾有基础的车友食用" src="https://img.xbrooke.cn/file/bd1804fb536e4ba105964.png"></a><div class="content"><span class="title" href="/p/1676.html" title="领克车机常用包名 适合爱折腾有基础的车友食用">领克车机常用包名 适合爱折腾有基础的车友食用</span><span class="article-recent_post_categories" href="/p/1676.html">领克OSN</span></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/53121.html" title="领克安装百度地图V20大屏车机板，老车机用户有福了~32位百度大屏版它来了"><img alt="领克安装百度地图V20大屏车机板，老车机用户有福了~32位百度大屏版它来了" src="https://img.xbrooke.cn/file/e725796380f15a099a49a.jpg"></a><div class="content"><span class="title" href="/p/53121.html" title="领克安装百度地图V20大屏车机板，老车机用户有福了~32位百度大屏版它来了">领克安装百度地图V20大屏车机板，老车机用户有福了~32位百度大屏版它来了</span><span class="article-recent_post_categories" href="/p/53121.html">领克OSN</span></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/28607.html" title="领克车机应用程序包名 可用于第三方app更换包名使用"><img alt="领克车机应用程序包名 可用于第三方app更换包名使用" src="https://img.xbrooke.cn/file/bd1804fb536e4ba105964.png"></a><div class="content"><span class="title" href="/p/28607.html" title="领克车机应用程序包名 可用于第三方app更换包名使用">领克车机应用程序包名 可用于第三方app更换包名使用</span><span class="article-recent_post_categories" href="/p/28607.html">领克OSN</span></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Brooke</span></div><div class="footer-bar-description">来自 徐大兵 的文章</div><a class="footer-bar-link" href="/about/">了解更多</a></div><div id="footer_deal"></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 By&nbsp;<a class="footer-bar-link" href="/">徐大兵</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index" alt="粤ICP备2022068881号">粤ICP备2022068881号</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" aria-label="copyright"><i class="solitude fa-solid fa-copyright"></i><i class="solitude fa-brands fa-creative-commons-by"></i><i class="solitude fa-brands fa-creative-commons-nc"></i><i class="solitude fa-brands fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.0.3"></script><script src="/js/main.js?v=2.0.3"></script><script src="/js/third_party/waterfall.min.js?v=2.0.3"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/third_party/universe.min.js?v=2.0.3"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script>const coverColorConfig = {
+    api: 'https://api.qjqq.cn/api/Imgcolor?img=',
+    time: 43200000
+}</script><script src="/js/covercolor/api.js?v=2.0.3"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.73.2/instantsearch.production.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.24.0/algoliasearch-lite.umd.min.js"></script><script>LA.init({id:"3J7I70Eb4ZldC5hz",ck:"3J7I70Eb4ZldC5hz"})</script><div class="js-pjax"><script>(() => {
+    const getCount = () => {
+        const ele = document.querySelectorAll('.twikoo-count')
+        if (!ele) return
+        twikoo.getCommentsCount({
+            envId: 'https://twikoo.xbrooke.cn/',
+            region: '',
+            urls: [window.location.pathname],
+            includeReply: false
+        }).then(res => {
+            ele.forEach(item => item.textContent = res[0].count)
+        }).catch(err => {
+            console.error(err)
+        })
+    }
+    const init = () => {
+        twikoo.init(Object.assign({
+            el: '#twikoo-wrap',
+            envId: 'https://twikoo.xbrooke.cn/',
+            region: '',
+            path: window.location.pathname,
+            onCommentLoaded: () => {
+                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+            }
+        }, null))
+
+         && getCount()
+        sco.owoBig({
+            body: '.OwO-body',
+            item: '.OwO-items li'
+        })
+
+        true && barrageTwikoo()
+    }
+
+    const loadTwikoo = () => {
+        if (typeof twikoo === 'object') setTimeout(init,0)
+        else utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.38/twikoo.all.min.js').then(init)
+    }
+
+    if ('Twikoo' === 'Twikoo' || false) {
+        if (false) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+        else loadTwikoo()
+    } else {
+        window.loadTwoComment = loadTwikoo
+    }
+})()
+</script><script>async function barrageTwikoo() {
+    await fetch("https://twikoo.xbrooke.cn/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            event: "COMMENT_GET",
+            accessToken: "a970a8ffae50793ebeb9e919994b47b",
+            url: window.location.pathname
+        })
+    }).then(async res => {
+        if (!res.ok) throw new Error("HTTP error! status: " + res.status)
+        const data = await res.json();
+        const init = () => {
+            initializeCommentBarrage((data.data).map(item => Object.assign({
+                content: item.comment,
+                nick: item.nick,
+                mailMd5: item.mailMd5,
+                id: item.id
+            })))
+        }
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=2.0.3').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script><script defer pjax src="https://pv.lemonso.com/js"></script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- google adsense--><!-- search--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><span class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/')">领克车机</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/Hexo/')">Hexo</a></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=2.0.3"></script><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["p/19423.html","p/ab29.html","p/1676.html","p/53121.html","p/28607.html","p/60576.html","p/22189.html","p/da7.html"];function toRandomPost(){ pjax.loadUrl(GLOBAL_CONFIG.root+posts[Math.floor(Math.random()*posts.length)]); }</script>
