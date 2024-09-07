@@ -3733,6 +3733,7 @@ span.tags-punctuation i {
 }
 #loading-box .loading-img {
   width: 100px;
+  height: 100px;
   margin: auto;
   animation-duration: 0.2s;
   animation-name: loadingAction;
@@ -8165,6 +8166,7 @@ div#banners .bannerText {
   #post .post-copyright {
     box-shadow: var(--efu-shadow-border);
     padding: 1rem 1.3rem;
+    margin: 0.5rem;
   }
 }
 #post .post-copyright .post-copyright__author_group .post-copyright__author_img {
@@ -8608,7 +8610,7 @@ div#banners .bannerText {
   transition: all 0.3s ease-out 0s;
 }
 .post #post-info #post-meta i {
-  font-size: 16px;
+  font-size: 13px;
   margin-right: 4px;
 }
 .post #post-info #post-meta > div {
@@ -9165,6 +9167,11 @@ div#banners .bannerText {
   flex-wrap: wrap;
   padding: 0 2rem;
 }
+@media screen and (max-width: 768px) {
+  #post .post-tools-right {
+    padding: 0 0.5rem;
+  }
+}
 #post .post-tools-right .tag_share .post-meta__tag-list {
   display: flex;
   padding: 0;
@@ -9497,7 +9504,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(0,0,0,0.85);
   --efu-hovertext: #0a84ff;
   --efu-ahoverbg: #fff;
-  --efu-lighttext: var(--efu-fontcolor);
+  --efu-lighttext: var(--efu-theme);
   --efu-secondtext: #a1a2b8;
   --efu-scrollbar: rgba(200,200,223,0.4);
   --efu-card-btn-bg: #30343f;
@@ -9543,7 +9550,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(255,255,255,0.85);
   --efu-hovertext: var(--efu-main);
   --efu-ahoverbg: #f7f7fa;
-  --efu-lighttext: var(--efu-fontcolor);
+  --efu-lighttext: var(--efu-main);
   --efu-secondtext: rgba(60,60,67,0.8);
   --efu-scrollbar: rgba(60,60,67,0.4);
   --efu-card-btn-bg: #edf0f7;
@@ -10272,7 +10279,12 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   background: var(--efu-card-bg);
 }
 .post #post-comment {
-  padding: 0 2rem;
+  padding: 0 2rem 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .post #post-comment {
+    padding: 0 0.5rem 0.5rem;
+  }
 }
 #post-comment > div.comment-head > div.comment-privacy {
   display: block;
