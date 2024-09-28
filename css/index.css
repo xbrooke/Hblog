@@ -2078,7 +2078,7 @@ i.solitude {
 }
 span.tags-punctuation i {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   transition: none;
   margin-right: 2px;
   opacity: 0.4;
@@ -2845,29 +2845,6 @@ span.tags-punctuation i {
 [data-theme=dark] #aside-content > .card-widget.card-info {
   border: var(--style-border-always);
 }
-#aside-content .card-webinfo .webinfo .webinfo-item-title {
-  display: flex;
-}
-#aside-content .card-webinfo .webinfo .webinfo-item-title i {
-  line-height: 2 !important;
-  margin-right: 6px;
-  width: 16px;
-  text-align: center;
-  font-size: 16px !important;
-}
-#aside-content .card-webinfo .webinfo .webinfo-item {
-  display: flex;
-  justify-content: space-between;
-  white-space: nowrap;
-  -webkit-box-align: center;
-  align-items: center;
-  padding: 0.1rem 0.5rem 0;
-}
-#aside-content .card-webinfo .webinfo .webinfo-item div:first-child {
-  -webkit-box-flex: 1;
-  flex: 1 1 0;
-  padding-right: 1rem;
-}
 #aside-content .card-allinfo hr {
   display: flex;
   position: relative;
@@ -3179,6 +3156,29 @@ span.tags-punctuation i {
   font-size: 12px;
   color: var(--efu-secondtext);
   margin-top: auto;
+}
+.webinfo-item {
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0.1rem 0.5rem 0;
+}
+.webinfo-item div:first-child {
+  -webkit-box-flex: 1;
+  flex: 1 1 0;
+  padding-right: 1rem;
+}
+.webinfo .webinfo-item-title {
+  display: flex;
+}
+.webinfo .webinfo-item-title i {
+  line-height: 2;
+  margin-right: 6px;
+  width: 16px;
+  text-align: center;
+  font-size: 16px;
 }
 #console {
   display: flex;
@@ -3710,132 +3710,6 @@ span.tags-punctuation i {
 }
 #footer-bar > div > div.footer-bar-left > span {
   margin-right: 1rem;
-}
-#loading-box {
-  user-select: none;
-}
-#loading-box .loading-bg {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: var(--efu-background);
-  z-index: 1999;
-  opacity: 1;
-  transition: 0.2s;
-  pointer-events: all;
-  animation: showLoading 0.3s 0s backwards;
-}
-#loading-box.loaded .loading-bg {
-  pointer-events: none;
-  transition: 0.2s;
-  animation: hideLoading 0.3s 0s forwards;
-}
-#loading-box .loading-img {
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  animation-duration: 0.2s;
-  animation-name: loadingAction;
-  border-radius: 50px;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@-moz-keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@-webkit-keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@-o-keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@keyframes loadingAction {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-@-moz-keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-o-keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes hideLoading {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-moz-keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes showLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 #page-header {
   position: relative;
@@ -5094,11 +4968,6 @@ span.tags-punctuation {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
-}
-@media screen and (min-width: 1300px) {
-  .recent-post-item > .recent-post-info .recent-post-info-top .article-title {
-    font-size: 30px;
-  }
 }
 .recent-post-item > .recent-post-info .recent-post-info-top .recent-post-info-top-tips {
   display: flex;
@@ -6972,7 +6841,7 @@ time.comment-time {
   background: linear-gradient(120deg, #5b27ff 0, #00d4ff 100%);
   background-size: 200%;
   animation: gradient 15s ease infinite;
-  width: calc(60% - 0.5rem / 2);
+  flex: 4;
 }
 #about-page .myInfoAndSayHello .title1 {
   opacity: 0.8;
@@ -6993,7 +6862,7 @@ time.comment-time {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: calc(40% - (0.5rem / 2));
+  flex: 3;
 }
 #about-page .aboutsiteTips h2 {
   margin-right: auto;
@@ -7048,7 +6917,6 @@ time.comment-time {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: calc(50% - (0.5rem / 2));
   min-height: 450px;
 }
 #about-page .author-content-item.skills .tags-group-all {
@@ -7128,7 +6996,7 @@ time.comment-time {
   }
 }
 #about-page .author-content-item-group.mapAndInfo {
-  width: calc(60% - (0.5rem / 2));
+  flex: 8;
   gap: 0.5rem;
 }
 @media screen and (min-width: 1300px) {
@@ -7229,7 +7097,6 @@ time.comment-time {
   animation: gradient 15s ease infinite;
   min-height: 200px;
   height: fit-content;
-  width: calc(60% - (0.5rem / 2));
 }
 #about-page .author-content-item.buff .card-content {
   display: flex;
@@ -7257,7 +7124,6 @@ time.comment-time {
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  width: calc(40% - (0.5rem / 2));
 }
 #about-page .author-content-item.maxim .maxim-title {
   display: flex;
@@ -7276,7 +7142,6 @@ time.comment-time {
   min-height: 300px;
   overflow: hidden;
   color: var(--efu-white);
-  width: 59%;
 }
 #about-page .author-content-item.game-apex::after {
   box-shadow: 0 -69px 203px 11px #04120f inset;
@@ -7299,7 +7164,6 @@ time.comment-time {
   padding: 1rem 2rem;
 }
 #about-page .author-content-item.game-jl {
-  width: 39%;
   min-height: 300px;
   overflow: hidden;
   color: var(--efu-white);
@@ -7316,7 +7180,7 @@ time.comment-time {
 .author-content-item.personalities {
   overflow: hidden;
   position: relative;
-  width: calc(60% - (0.5rem / 2));
+  flex: 6;
 }
 @media screen and (max-width: 768px) {
   .author-content-item.personalities {
@@ -7348,7 +7212,6 @@ time.comment-time {
   min-height: 240px;
   position: relative;
   overflow: hidden;
-  width: calc(40% - (0.5rem / 2));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7437,7 +7300,6 @@ time.comment-time {
 }
 #about-page .about-statistic {
   min-height: 380px;
-  width: calc(40% - (0.5rem / 2));
   background-size: cover;
   color: var(--efu-white);
   overflow: hidden;
@@ -7772,6 +7634,7 @@ div#banners .bannerText {
 @media screen and (max-width: 768px) {
   .author-content {
     margin-top: 0;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -7793,7 +7656,7 @@ div#banners .bannerText {
   margin-top: 0;
 }
 .author-content-item {
-  width: 49.5%;
+  flex: 4;
   border-radius: 12px;
   background: var(--efu-card-bg);
   border: var(--style-border-always);
@@ -9504,7 +9367,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(0,0,0,0.85);
   --efu-hovertext: #0a84ff;
   --efu-ahoverbg: #fff;
-  --efu-lighttext: var(--efu-theme);
+  --efu-lighttext: var(--efu-fontcolor);
   --efu-secondtext: #a1a2b8;
   --efu-scrollbar: rgba(200,200,223,0.4);
   --efu-card-btn-bg: #30343f;
@@ -9550,7 +9413,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(255,255,255,0.85);
   --efu-hovertext: var(--efu-main);
   --efu-ahoverbg: #f7f7fa;
-  --efu-lighttext: var(--efu-main);
+  --efu-lighttext: var(--efu-fontcolor);
   --efu-secondtext: rgba(60,60,67,0.8);
   --efu-scrollbar: rgba(60,60,67,0.4);
   --efu-card-btn-bg: #edf0f7;
@@ -10603,6 +10466,9 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   font-size: 0.5rem;
   color: var(--efu-secondtext);
 }
+.tk-content {
+  margin-top: 0 !important;
+}
 .tk-meta-input .el-input .el-input-group__prepend {
   box-shadow: none;
   border-radius: 12px 0 0 12px;
@@ -10705,10 +10571,6 @@ button.el-button.tk-cancel.el-button--default.el-button--small {
   background: var(--efu-secondbg) !important;
   border-radius: 8px !important;
   color: var(--efu-fontcolor) !important;
-}
-.tk-replies .tk-content span:first-child {
-  font-size: inherit;
-  color: #000;
 }
 .OwO.OwO-open .OwO-body {
   animation: 0.3s ease 0.1s 1 normal both running donate_effcet;
