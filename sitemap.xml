@@ -188,20 +188,6 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -216,21 +202,14 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/</loc>
+    <loc>https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/tags/CarPlay/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -251,7 +230,21 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/tags/APP%E5%8C%85%E5%90%8D/</loc>
+    <loc>https://hblog.xbrooke.cn/tags/CarPlay/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -266,6 +259,13 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/tags/%E5%B8%B8%E7%94%A8%E5%8C%85%E5%90%8D/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/APP%E5%8C%85%E5%90%8D/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -295,14 +295,14 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/CarPlay/</loc>
+    <loc>https://hblog.xbrooke.cn/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://hblog.xbrooke.cn/categories/CarPlay/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
