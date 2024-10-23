@@ -5728,6 +5728,7 @@ span.tags-punctuation {
   border-radius: 8px;
   align-items: center;
   height: 30px;
+  scrollbar-width: none;
 }
 @media screen and (max-width: 768px) {
   #category-bar .category-bar-items {
@@ -5767,6 +5768,9 @@ span.tags-punctuation {
   color: var(--efu-white);
 }
 #home {
+  order: 1;
+}
+#page {
   order: 1;
 }
 .hot-tip {
@@ -9134,7 +9138,7 @@ div#banners .bannerText {
     width: 300px;
     bottom: -100px;
     right: 20px;
-    z-index: 7;
+    z-index: 12;
     height: fit-content;
     transition: cubic-bezier(0.42, 0, 0.3, 1.11) 0.3s;
     border: var(--style-border);
@@ -9390,7 +9394,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(0,0,0,0.85);
   --efu-hovertext: #0a84ff;
   --efu-ahoverbg: #fff;
-  --efu-lighttext: var(--efu-fontcolor);
+  --efu-lighttext: var(--efu-theme);
   --efu-secondtext: #a1a2b8;
   --efu-scrollbar: rgba(200,200,223,0.4);
   --efu-card-btn-bg: #30343f;
@@ -9436,7 +9440,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(255,255,255,0.85);
   --efu-hovertext: var(--efu-main);
   --efu-ahoverbg: #f7f7fa;
-  --efu-lighttext: var(--efu-fontcolor);
+  --efu-lighttext: var(--efu-main);
   --efu-secondtext: rgba(60,60,67,0.8);
   --efu-scrollbar: rgba(60,60,67,0.4);
   --efu-card-btn-bg: #edf0f7;
@@ -9685,12 +9689,14 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   margin-left: -15rem;
   padding: 1rem;
   width: 30rem;
+  flex-direction: column;
   box-shadow: var(--efu-shadow-lightblack);
   background: var(--efu-card-bg);
   border: var(--style-border);
   transition: 0.3s;
   border-radius: 8px;
   animation: slide-in 0.6s ease 0s 1 normal none running;
+  gap: 16px;
 }
 .search-dialog:hover {
   border: var(--style-border-hover);
@@ -9714,12 +9720,10 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
 .search-dialog .algolia-navbar {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
 }
 .search-dialog .search-close-button {
-  position: absolute;
-  top: 0.8rem;
-  right: 1rem;
+  margin-left: 4px;
+  padding: 4px;
   color: var(--efu-gray);
   font-size: 1.4em;
   line-height: 1;
@@ -9731,9 +9735,6 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
 }
 .search-dialog .algolia-tips-text {
   margin-left: 0.4rem;
-}
-.search-dialog #algolia-input-panel {
-  margin-bottom: 8px;
 }
 .search-dialog .search-box,
 .search-dialog .ais-SearchBox {
@@ -9766,7 +9767,6 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   visibility: hidden;
 }
 .search-dialog #search-results {
-  padding-top: 8px;
   max-height: calc(80vh - 130px);
   overflow-y: auto;
 }
@@ -9777,9 +9777,7 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
 }
 .search-dialog .ais-Hits-list {
   padding: 0;
-}
-.search-dialog .ais-Hits-item {
-  margin: 10px 0;
+  margin: 0;
 }
 .search-dialog .algolia-hit-item-content {
   margin: 0;
@@ -9795,17 +9793,21 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
   overflow: hidden;
   font-weight: bold;
 }
+.search-dialog .algolia-hit-item-link:hover {
+  color: var(--efu-main);
+}
+.search-dialog .ais-Stats-text {
+  font-size: 12px;
+}
 .search-dialog mark {
   color: var(--efu-theme);
   font-style: normal;
   background: var(--efu-card-bg);
 }
 .search-dialog .ais-Hits--empty {
-  text-align: center;
   font-weight: 600;
 }
 .search-dialog .ais-Pagination-list {
-  margin: 0.2rem 0 0;
   padding: 0;
   text-align: center;
 }
@@ -9825,15 +9827,13 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
 }
 .search-dialog .search-dialog__title {
   font-weight: 700;
-  padding: 0 0 0.7rem;
   color: var(--efu-main);
   font-size: 1.4em;
   line-height: 1;
 }
 .search-dialog #algolia-tips {
-  padding-top: 12px;
   color: var(--efu-secondtext);
-  right: 0;
+  width: 100%;
   margin: auto;
 }
 .search-dialog #algolia-tips .algolia-tips-text {
@@ -9864,9 +9864,19 @@ figure.highlight .code-expand-btn:not(.expand-done) ~ pre {
 .ais-Pagination-item--selected a {
   background: var(--efu-main);
 }
+.algolia-tips {
+  color: var(--efu-secondtext);
+  margin-left: auto;
+  opacity: 0.8;
+}
+.algolia-tips i {
+  font-size: 18px;
+}
+#algolia-search .search-dialog .ais-SearchBox-input::placeholder {
+  opacity: 0.6;
+}
 #article-container figure.gallery-group {
   position: relative;
-  float: left;
   overflow: hidden;
   margin: 0;
   width: calc(50% - 8px);
