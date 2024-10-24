@@ -9394,7 +9394,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(0,0,0,0.85);
   --efu-hovertext: #0a84ff;
   --efu-ahoverbg: #fff;
-  --efu-lighttext: var(--efu-theme);
+  --efu-lighttext: var(--efu-fontcolor);
   --efu-secondtext: #a1a2b8;
   --efu-scrollbar: rgba(200,200,223,0.4);
   --efu-card-btn-bg: #30343f;
@@ -9440,7 +9440,7 @@ div#banners .bannerText {
   --efu-maskbgdeep: rgba(255,255,255,0.85);
   --efu-hovertext: var(--efu-main);
   --efu-ahoverbg: #f7f7fa;
-  --efu-lighttext: var(--efu-main);
+  --efu-lighttext: var(--efu-fontcolor);
   --efu-secondtext: rgba(60,60,67,0.8);
   --efu-scrollbar: rgba(60,60,67,0.4);
   --efu-card-btn-bg: #edf0f7;
