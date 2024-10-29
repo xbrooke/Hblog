@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hblog.xbrooke.cn/p/5189.html</loc>
+    
+    <lastmod>2024-10-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hblog.xbrooke.cn/p/60576.html</loc>
     
     <lastmod>2024-10-25</lastmod>
@@ -84,15 +93,6 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/p/da7.html</loc>
-    
-    <lastmod>2024-10-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/p/5189.html</loc>
     
     <lastmod>2024-10-25</lastmod>
     
@@ -190,6 +190,13 @@
   </url>
   
   <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/</loc>
+    <lastmod>2024-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://hblog.xbrooke.cn/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/</loc>
     <lastmod>2024-10-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -205,13 +212,6 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/</loc>
-    <lastmod>2024-10-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/</loc>
     <lastmod>2024-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -297,14 +297,14 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/%E9%A2%86%E5%85%8BOSN/</loc>
+    <loc>https://hblog.xbrooke.cn/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://hblog.xbrooke.cn/categories/%E9%A2%86%E5%85%8BOSN/</loc>
     <lastmod>2024-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
