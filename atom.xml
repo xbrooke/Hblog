@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>徐大兵</title>
-  <icon>https://hblog.xbrooke.cn/icon.png</icon>
+  <icon>https://hblog.xbrooke.cn/img/favicon.ico</icon>
   
   <link href="https://hblog.xbrooke.cn/atom.xml" rel="self"/>
   
@@ -190,9 +190,9 @@
     
     <category term="领克车机" scheme="https://hblog.xbrooke.cn/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/"/>
     
-    <category term="应用程序" scheme="https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
-    
     <category term="APP包名" scheme="https://hblog.xbrooke.cn/tags/APP%E5%8C%85%E5%90%8D/"/>
+    
+    <category term="应用程序" scheme="https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   

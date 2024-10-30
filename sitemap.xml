@@ -155,6 +155,20 @@
 
   
   <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%BC%B9%E7%AA%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2024-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://hblog.xbrooke.cn/tags/OSN/</loc>
     <lastmod>2024-10-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,20 +184,6 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
-    <lastmod>2024-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%BC%B9%E7%AA%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2024-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -260,6 +260,13 @@
   </url>
   
   <url>
+    <loc>https://hblog.xbrooke.cn/tags/APP%E5%8C%85%E5%90%8D/</loc>
+    <lastmod>2024-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2024-10-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -273,24 +280,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/APP%E5%8C%85%E5%90%8D/</loc>
-    <lastmod>2024-10-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://hblog.xbrooke.cn/categories/Adobe-%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2024-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/Adobe-%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://hblog.xbrooke.cn/categories/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
