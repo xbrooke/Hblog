@@ -6,7 +6,7 @@
   <link href="https://hblog.xbrooke.cn/atom.xml" rel="self"/>
   
   <link href="https://hblog.xbrooke.cn/"/>
-  <updated>2024-11-04T14:12:34.651Z</updated>
+  <updated>2024-11-04T14:14:33.125Z</updated>
   <id>https://hblog.xbrooke.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hblog.xbrooke.cn/p/45384.html"/>
     <id>https://hblog.xbrooke.cn/p/45384.html</id>
     <published>2024-11-04T14:02:56.000Z</published>
-    <updated>2024-11-04T14:12:34.651Z</updated>
+    <updated>2024-11-04T14:14:33.125Z</updated>
     
     
     <summary type="html">我开发了一款基于 Netlify 和 GitHub 的图床方案，以提高我 Hexo 博客的图片管理效率，实现自动部署和更新。✨</summary>
