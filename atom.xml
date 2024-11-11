@@ -6,7 +6,7 @@
   <link href="https://hblog.xbrooke.cn/atom.xml" rel="self"/>
   
   <link href="https://hblog.xbrooke.cn/"/>
-  <updated>2024-11-04T14:14:33.125Z</updated>
+  <updated>2024-11-11T15:08:45.151Z</updated>
   <id>https://hblog.xbrooke.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高德地图 7.5 领克版升级：全新仪表盘、HUD支持、智能语音助手</title>
+    <link href="https://hblog.xbrooke.cn/p/54519.html"/>
+    <id>https://hblog.xbrooke.cn/p/54519.html</id>
+    <published>2024-11-11T14:49:23.000Z</published>
+    <updated>2024-11-11T15:08:45.151Z</updated>
+    
+    
+    <summary type="html">这篇文章介绍了高德地图 7.5 领克适配版的独特功能，包括支持仪表盘显示、HUD、语音助手和多项车机优化。</summary>
+    
+    
+    
+    <category term="领克OSN" scheme="https://hblog.xbrooke.cn/categories/%E9%A2%86%E5%85%8BOSN/"/>
+    
+    <category term="高德地图" scheme="https://hblog.xbrooke.cn/categories/%E9%A2%86%E5%85%8BOSN/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE/"/>
+    
+    
+    <category term="领克车机" scheme="https://hblog.xbrooke.cn/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/"/>
+    
+    <category term="车机软件" scheme="https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="导航软件" scheme="https://hblog.xbrooke.cn/tags/%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>如何用 GitHub 和 Netlify 打造稳定的图床？</title>
