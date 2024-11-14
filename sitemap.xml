@@ -210,27 +210,6 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/tags/OSN/</loc>
-    <lastmod>2024-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/App%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2024-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
-    <lastmod>2024-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hblog.xbrooke.cn/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/</loc>
     <lastmod>2024-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -239,20 +218,6 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/</loc>
-    <lastmod>2024-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/</loc>
     <lastmod>2024-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -273,7 +238,42 @@
   </url>
   
   <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://hblog.xbrooke.cn/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/OSN/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/App%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2024-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -338,13 +338,6 @@
   </url>
   
   <url>
-    <loc>https://hblog.xbrooke.cn/categories/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2024-11-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hblog.xbrooke.cn/categories/%E5%8E%9F%E5%88%9B%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2024-11-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -353,6 +346,13 @@
   
   <url>
     <loc>https://hblog.xbrooke.cn/categories/%E9%A2%86%E5%85%8BOSN/</loc>
+    <lastmod>2024-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hblog.xbrooke.cn/categories/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2024-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
