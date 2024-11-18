@@ -6,7 +6,7 @@
   <link href="https://hblog.xbrooke.cn/atom.xml" rel="self"/>
   
   <link href="https://hblog.xbrooke.cn/"/>
-  <updated>2024-11-15T15:35:39.065Z</updated>
+  <updated>2024-11-18T15:41:13.582Z</updated>
   <id>https://hblog.xbrooke.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>🚗 领克 03 CarPlay 音频通道设置经验分享</title>
+    <link href="https://hblog.xbrooke.cn/p/63131.html"/>
+    <id>https://hblog.xbrooke.cn/p/63131.html</id>
+    <published>2024-11-18T15:36:48.000Z</published>
+    <updated>2024-11-18T15:41:13.582Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;哈喽~大家好，我是 &lt;strong&gt;徐大兵&lt;/strong&gt;！&lt;br&gt;
+昨天在测试 &lt;strong&gt;奥风测试版本的 CarPlay 软件&lt;/strong&gt; 时，意外发现了一个好消息——最新的 CarPlay 版本可以让车机音乐和 CarPlay</summary>
+        
+      
+    
+    
+    
+    <category term="领克OSN" scheme="https://hblog.xbrooke.cn/categories/%E9%A2%86%E5%85%8BOSN/"/>
+    
+    
+    <category term="领克车机" scheme="https://hblog.xbrooke.cn/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/"/>
+    
+    <category term="音频通道" scheme="https://hblog.xbrooke.cn/tags/%E9%9F%B3%E9%A2%91%E9%80%9A%E9%81%93/"/>
+    
+    <category term="CarPlay" scheme="https://hblog.xbrooke.cn/tags/CarPlay/"/>
+    
+  </entry>
   
   <entry>
     <title>高德地图 7.5 领克版升级：全新仪表盘、HUD支持、智能语音助手</title>
