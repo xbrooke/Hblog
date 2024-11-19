@@ -1,0 +1,535 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>🚗 领克01/03/05 视频壁纸设置教程 | 徐大兵</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="https://img.xbrooke.cn/file/199753263dae693f8b87d.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=2.1.7"><!-- inject head--><link rel="canonical" href="https://hblog.xbrooke.cn/p/40480.html"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="感谢@This.提供思维导图 🛠️ 步骤 1：准备工作 U盘安装   准备一个 U 盘  确保 U 盘具备 USB A 接口，并已格式化为 FAT32 格式。    准备视频文件  视频需为 16:9 横屏比例，MP4 格式。 建议分辨率：1080p（1920×1080）或更高。 将视频文件存入 U 盘，并重命名为： current_csd_live_wallpaper.mp4 📂     在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🚗 领克01&#x2F;03&#x2F;05 视频壁纸设置教程">
+<meta property="og:url" content="https://hblog.xbrooke.cn/p/40480.html">
+<meta property="og:site_name" content="徐大兵">
+<meta property="og:description" content="感谢@This.提供思维导图 🛠️ 步骤 1：准备工作 U盘安装   准备一个 U 盘  确保 U 盘具备 USB A 接口，并已格式化为 FAT32 格式。    准备视频文件  视频需为 16:9 横屏比例，MP4 格式。 建议分辨率：1080p（1920×1080）或更高。 将视频文件存入 U 盘，并重命名为： current_csd_live_wallpaper.mp4 📂     在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hblog.xbrooke.cn/img/fm/zm.avif">
+<meta property="article:published_time" content="2024-11-19T15:08:32.000Z">
+<meta property="article:modified_time" content="2024-11-19T15:17:51.881Z">
+<meta property="article:author" content="徐大兵">
+<meta property="article:tag" content="领克车机">
+<meta property="article:tag" content="车机教程">
+<meta property="article:tag" content="视频桌面">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hblog.xbrooke.cn/img/fm/zm.avif"><meta name="description" content="感谢@This.提供思维导图 🛠️ 步骤 1：准备工作 U盘安装 准备一个 U 盘 确保 U 盘具备 USB A 接口，并已格式化为 FAT32 格式。 准备视频文件 视频需为 16:9 横屏比例，MP4 格式。 建议分辨率：1080p（1920×1080）或更高。 将视频文件存入"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="徐大兵"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="https://img.xbrooke.cn/file/199753263dae693f8b87d.png"><link rel="apple-touch-icon" href="https://img.xbrooke.cn/file/199753263dae693f8b87d.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '2.1.7' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><link rel="stylesheet" href="/hot/hot.css"><script defer src="https://tj.xbrooke.cn/script.js" data-website-id="1d760fae-69fe-499d-98e6-356136e1bf5c"></script><link rel="stylesheet" href="/schedule/schedule.css"><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+          },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: {"appId":"A5O3F6RRMZ","apiKey":"01c9dc5afb5194da4390af8d0c517799","indexName":"xhexo","hits":{"per_page":10}},
+    localsearch: undefined,
+    runtime: '2024-07-18 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."},"barrage":{"title":"热评"}},
+    aside: {
+        sayhello: {
+            morning: "✨ 一日之计在于晨",
+            noon: "饱了才有力气干活",
+            afternoon: "集中精力，攻克难关🍵",
+            night: "不要太劳累了，早睡更健康",
+            goodnight: "晚安 😴",
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: {"avatar":"https://cravatar.cn","commentBarrage":true},
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: false,
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="徐大兵" type="application/atom+xml">
+</head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fa-solid fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论</div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /<img class="tk-owo-emotion" [^>]+>/g
+    let cache = utils.saveToLocal.get('twikoo-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+
+    await fetch('https://twikoo.xbrooke.cn/.netlify/functions/twikoo', {
+        method: "POST",
+        body: JSON.stringify({
+            "event": "GET_RECENT_COMMENTS",
+            "includeReply": true,
+            "pageSize": 6
+        }),
+        headers: {'Content-Type': 'application/json'}
+    }).then(res => res.json()).then(async ({data}) => {
+        for (const i of data) {
+            if (i.avatar === undefined) i.avatar = '/avatar/d615d5793929e8c7d70eab5f00f7f5f1?d=mp'
+            let title = ''
+            if (i.url) {
+                await fetch(i.url).then(res => res.text()).then(html => {
+                    const parser = new DOMParser()
+                    const doc = parser.parseFromString(html, 'text/html')
+                    title = doc.querySelector('title').innerText
+                }).catch(() => {
+                    title = i.url
+                })
+            }
+            if (title.indexOf('|') > 0) {
+                title = title.split('|')[0]
+            }
+            ls.push({
+                avatar: i.avatar,
+                nick: i.nick,
+                title: title,
+                content: i.comment,
+                url: i.url + '#' + i.id,
+                time: i.created
+            })
+        }
+        setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+        utils.saveToLocal.set('twikoo-recent-comments-console', ls, 0.2)
+    });
+
+    function setHtml(el, data) {
+        el.innerHTML = data.map(i => `
+            <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                <div class="comment-info">
+                    <img src="${i.avatar}" class="nolazyload" alt="${i.nick}">
+                    <div>
+                        <span class="comment-user">${i.nick}</span>
+                    </div>
+                    <time class="comment-time" datetime="${new Date(i.time)}"></time>
+                </div>
+                <div class="comment-content">${formatContent(i.content)}</div>
+                <div class="comment-title">
+                <i class="solitude fa-solid fa-comment"></i>
+                ${i.title}</div>
+            </div>
+        `).join('')
+        if (typeof sco !== 'undefined') sco.changeTimeFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => sco.changeTimeFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => sco.changeTimeFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '表情')
+        content = content.replace(/<\/*br>|[\s\uFEFF\xA0]+/g, '');
+        content = content.replace(/<img.*?>/g, '[图片]');
+        content = content.replace(/<a.*?>.*?<\/a>/g, '[链接]');
+        content = content.replace(/<pre.*?>.*?<\/pre>/g, '[代码]');
+        content = content.replace(/<.*?>/g, '');
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/">软件教程<sup>4</sup></a><a href="/tags/%E5%BC%B9%E7%AA%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">弹窗解决方法<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">软件分享<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>1</sup></a><a href="/tags/OSN/">OSN<sup>2</sup></a><a href="/tags/App%E5%AE%89%E8%A3%85/">App安装<sup>2</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决<sup>1</sup></a><a href="/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/">影音播放<sup>2</sup></a><a href="/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/">领克车机<sup>9</sup></a><a href="/tags/%E9%9F%B3%E9%A2%91%E9%80%9A%E9%81%93/">音频通道<sup>1</sup></a><a href="/tags/CarPlay/">CarPlay<sup>2</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/">车机教程<sup>3</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">应用商店<sup>1</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/">车机软件<sup>2</sup></a><a href="/tags/%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6/">导航软件<sup>2</sup></a><a href="/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/">Alisr网盘搭建<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E6%A1%8C%E9%9D%A2/">视频桌面<sup>1</sup></a><a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">安装教程<sup>1</sup></a><a href="/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/">安装设置<sup>1</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序<sup>2</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E5%8C%85%E5%90%8D/">常用包名<sup>1</sup></a><a href="/tags/APP%E5%8C%85%E5%90%8D/">APP包名<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">2024/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">2024/10</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">2024/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">2024/07</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span class="card-archive-list-count-unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fa-solid fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude fa-solid fa-comment"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fa-solid fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span>关于本站</span></a></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/">软件教程<sup>4</sup></a><a href="/tags/%E5%BC%B9%E7%AA%97%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">弹窗解决方法<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/">软件分享<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>1</sup></a><a href="/tags/OSN/">OSN<sup>2</sup></a><a href="/tags/App%E5%AE%89%E8%A3%85/">App安装<sup>2</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决<sup>1</sup></a><a href="/tags/%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/">影音播放<sup>2</sup></a><a href="/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/">领克车机<sup>9</sup></a><a href="/tags/%E9%9F%B3%E9%A2%91%E9%80%9A%E9%81%93/">音频通道<sup>1</sup></a><a href="/tags/CarPlay/">CarPlay<sup>2</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/">车机教程<sup>3</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97/">应用商店<sup>1</sup></a><a href="/tags/%E8%BD%A6%E6%9C%BA%E8%BD%AF%E4%BB%B6/">车机软件<sup>2</sup></a><a href="/tags/%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6/">导航软件<sup>2</sup></a><a href="/tags/Alisr%E7%BD%91%E7%9B%98%E6%90%AD%E5%BB%BA/">Alisr网盘搭建<sup>1</sup></a><a href="/tags/%E8%A7%86%E9%A2%91%E6%A1%8C%E9%9D%A2/">视频桌面<sup>1</sup></a><a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">安装教程<sup>1</sup></a><a href="/tags/%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/">安装设置<sup>1</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/">应用程序<sup>2</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E5%8C%85%E5%90%8D/">常用包名<sup>1</sup></a><a href="/tags/APP%E5%8C%85%E5%90%8D/">APP包名<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude fa-solid fa-file-word"></i><div class="item-name">全站字数 :</div></div><div class="item-count">13.5k</div></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><span class="title">Brooke</span><i class="solitude fa-solid fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">🚗 领克01/03/05 视频壁纸设置教程</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><span>关于本站</span></a></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fa-solid fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fa-solid fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude fa-solid fa-arrow-up"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fa-solid fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/fm/zm.avif" alt="🚗 领克01/03/05 视频壁纸设置教程"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E9%A2%86%E5%85%8BOSN/">领克OSN</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>领克车机</span></a><a class="post-meta__tags" href="/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>车机教程</span></a><a class="post-meta__tags" href="/tags/%E8%A7%86%E9%A2%91%E6%A1%8C%E9%9D%A2/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>视频桌面</span></a></div></div></div></div><h1 class="post-title">🚗 领克01/03/05 视频壁纸设置教程</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-11-19 23:08:32"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2024-11-19T15:08:32.000Z">2024-11-19T15:08:32.000Z</time></span><span class="post-meta-date" title="最后更新于 2024-11-19 23:17:51"><i class="post-meta-icon solitude fa-solid fa-arrows-rotate"></i><time datetime="2024-11-19T15:17:51.881Z">2024-11-19T15:17:51.881Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fa-solid fa-file-word" title="文章字数"></i><span class="word-count">1k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fa-solid fa-clock" title="阅读耗时"></i><span>3 min</span></span><span class="post-meta-position" title="作者IP归属地为深圳"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>深圳</span></span><a class="post-meta-pv" href="/p/40480.html" title="文章热度"><i class="post-meta-icon solitude fa-solid fa-fire-flame-curved"></i><span id="twikoo_visitors"><i class="solitude fa-solid fa-spinner fa-spin"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fa-solid fa-comment"></i><a href="/p/40480.html#post-comment"><span class="twikoo-count"><i class="solitude fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="感谢-This-提供思维导图"><a class="headerlink" href="#感谢-This-提供思维导图"></a>感谢@This.提供思维导图</h3>
+<h2 id="🛠️-步骤-1：准备工作"><a class="headerlink" href="#🛠️-步骤-1：准备工作"></a>🛠️ 步骤 1：准备工作</h2>
+<h4 id="U盘安装"><a class="headerlink" href="#U盘安装"></a><strong>U盘安装</strong></h4>
+<ol>
+<li>
+<p><strong>准备一个 U 盘</strong></p>
+<ul>
+<li>确保 U 盘具备 USB A 接口，并已格式化为 <strong>FAT32</strong> 格式。</li>
+</ul>
+</li>
+<li>
+<p><strong>准备视频文件</strong></p>
+<ul>
+<li>视频需为 <strong>16:9 横屏比例</strong>，MP4 格式。</li>
+<li><strong>建议分辨率</strong>：1080p（1920×1080）或更高。</li>
+<li>将视频文件存入 U 盘，并重命名为：<br>
+<code>current_csd_live_wallpaper.mp4</code> 📂</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="在线安装"><a class="headerlink" href="#在线安装"></a><strong>在线安装</strong></h4>
+<p><strong>下载夸克网盘</strong></p>
+<ul>
+<li>进入车机的应用商店，搜索并下载 <strong>夸克网盘</strong> 应用。</li>
+</ul>
+<p><strong>下载视频文件</strong></p>
+<ul>
+<li>打开 <strong>夸克网盘</strong>，访问 <a target="_blank" rel="noopener" href="https://cloud.cchclub.cn">云盘上传专区</a>或者访问<a target="_blank" rel="noopener" href="http://appstore.xbrooke.cn/Lynk&amp;Co%E5%A3%81%E7%BA%B8">Web商店下载专区</a>，选择 MP4 格式的壁纸文件进行下载。</li>
+</ul>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/1.avif" alt="1.avif" loading="lazy"></p>
+<p><strong>使用 ApktoolM 文件管理器</strong></p>
+<ul>
+<li>下载并安装 <strong>ApktoolM</strong> 应用。</li>
+<li>使用 ApktoolM 打开夸克网盘的下载目录，找到已下载的 MP4 文件。</li>
+</ul>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/13.avif" alt="13.avif" loading="lazy"></p>
+<p><strong>重命名视频文件</strong></p>
+<ul>
+<li>将下载的视频文件重命名为：<br>
+<code>current_csd_live_wallpaper.mp4</code>。</li>
+</ul>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/17.avif" alt="17.avif" loading="lazy"></p>
+<h2 id="🎨-步骤-2：应用视频壁纸"><a class="headerlink" href="#🎨-步骤-2：应用视频壁纸"></a>🎨 步骤 2：应用视频壁纸</h2>
+<p>打开车辆主屏幕，向左滑动进入 <strong>主题 APP</strong> 页面。</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/13.avif" alt="13.avif" loading="lazy"></p>
+<p>滑动到  <code>最底 </code>  选择   <code> 极光</code>   视频壁纸，并下载应用。</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/11.avif" alt="11.avif" loading="lazy"></p>
+<p>应用完成后，返回桌面确认已应用    <code> 极光</code>   视频壁纸后，重启车机。</p>
+<p>（确保有完整的文件路径）</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/21.avif" alt="21.avif" loading="lazy"></p>
+<h2 id="🔄-步骤-3：重启车辆"><a class="headerlink" href="#🔄-步骤-3：重启车辆"></a>🔄 步骤 3：重启车辆</h2>
+<ul>
+<li>设置完成后，请通过以下方法重启车辆：<br>
+<strong>方法</strong>：按下转向灯（方向盘左边）圆形按钮（不要按雨刮器的那个，你群里问我就说你是小笨蛋🤬），进入车辆信息后，长按方向右键约15s。</li>
+</ul>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/28.avif" alt="28.avif" loading="lazy"></p>
+<h2 id="🔌-步骤-4：将-U-盘插入车辆"><a class="headerlink" href="#🔌-步骤-4：将-U-盘插入车辆"></a>🔌 步骤 4：将 U 盘插入车辆</h2>
+<ul>
+<li>找到车载手套箱内的 USB 接口，将准备好的 U 盘插入。</li>
+</ul>
+<h2 id="📂-步骤-5：访问文件管理器"><a class="headerlink" href="#📂-步骤-5：访问文件管理器"></a>📂 步骤 5：访问文件管理器</h2>
+<p>选择以下任意方式访问 U 盘内容：</p>
+<h3 id="方法-1：通过工程模式进入"><a class="headerlink" href="#方法-1：通过工程模式进入"></a>方法 1：通过工程模式进入</h3>
+<p>输入 <code>#*32279</code> 进入工程模式。</p>
+<p><img src="https://hblog.xbrooke.cn/p/ab29/1.avif" alt loading="lazy"></p>
+<p>选择 <code>testAPP</code> → <code>文件管理</code>，打开 U 盘。</p>
+<p><img src="https://hblog.xbrooke.cn/p/ab29/2.avif" alt loading="lazy"></p>
+<h3 id="方法-2：使用第三方文件管理器"><a class="headerlink" href="#方法-2：使用第三方文件管理器"></a>方法 2：使用第三方文件管理器</h3>
+<p>安装文件管理 APP（推荐：<strong>ES 文件管理器</strong>、<strong>ApktoolM</strong>）。</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/13.avif" alt="13.avif" loading="lazy"></p>
+<p>打开已安装的工具，进入 刚才的夸克文件。</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/17.avif" alt="17.avif" loading="lazy"></p>
+<h2 id="🖇️-步骤-6：复制视频文件"><a class="headerlink" href="#🖇️-步骤-6：复制视频文件"></a>🖇️ 步骤 6：复制视频文件</h2>
+<p>进入 U 盘或者找到夸克文件夹，找到并选择 <code>current_csd_live_wallpaper.mp4</code> 文件。</p>
+<p><strong>复制到目标路径</strong>：</p>
+<ul>
+<li>返回文件管理器系统存储根目录，长按路径删除路径到 <code>/</code> 后，跳转到根目录，找到路径 <code>/ivres/XUI/wallpaper</code>。</li>
+</ul>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/15.avif" alt="15.avif" loading="lazy"></p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/20.avif" alt="img" loading="lazy"></p>
+<p>找到 <code>ivres</code> 文件夹后，点击进入，看到 <code>current_csd_live_wallpaper.mp4</code></p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/18.avif" alt="18.avif" loading="lazy"></p>
+<p>右上角粘贴U盘或者夸克网盘复制的  <code>current_csd_live_wallpaper.mp4</code></p>
+<p>将视频文件复制并覆盖MP4文件。</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/20.avif" alt="20.avif" loading="lazy"></p>
+<h2 id="🎨-步骤-7：重启车辆"><a class="headerlink" href="#🎨-步骤-7：重启车辆"></a>🎨 步骤 7：重启车辆</h2>
+<p>替换完成后，重启车辆系统，视频壁纸将成功生效。</p>
+<p><strong>方法</strong>：按下转向灯（方向盘左边）圆形按钮（不要按雨刮器的那个，你群里问我就说你是小笨蛋🤬），进入车辆信息后，长按方向右键约15s。</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/28.avif" alt="28.avif" loading="lazy"></p>
+<p>🎉 <strong>完成啦！</strong><br>
+现在，领克03车机界面已成功启用炫酷的视频壁纸，赶快试试吧！🚘✨</p>
+<p><img src="https://h.xbrooke.cn/img/2024-11-1902/25.avif" alt="25.avif" loading="lazy"></p>
+<h2 id="✨-额外功能：壁纸上传专区"><a class="headerlink" href="#✨-额外功能：壁纸上传专区"></a>✨ 额外功能：壁纸上传专区</h2>
+<p>群友们可以上传精美壁纸至指定平台，分享创意！上传内容有机会成为应用商店的壁纸专区。</p>
+<p><strong>上传地址</strong>：<a target="_blank" rel="noopener" href="https://cloud.cchclub.cn">云壁纸上传专区</a><br>
+<strong>账号</strong>：<code>lynkco@osn.pic</code><br>
+<strong>密码</strong>：<code>lynkco</code></p>
+<h2 id="❓-常见问题解答"><a class="headerlink" href="#❓-常见问题解答"></a>❓ 常见问题解答</h2>
+<p><strong>Q: 视频无法播放，显示“文件格式不支持”怎么办？</strong></p>
+<ul>
+<li>请确认视频格式为 MP4，使用工具（如 Format Factory 或 HandBrake）转换格式。</li>
+</ul>
+<p><strong>Q: 视频画质不清晰怎么办？</strong></p>
+<ul>
+<li>确保视频分辨率为至少 1080p。画质差可能需要更高质量源文件。</li>
+</ul>
+<p><strong>Q: 系统显示文件已满，无法复制视频怎么办？</strong></p>
+<ul>
+<li>删除 <code>/ivres/XUI/wallpaper</code> 目录中的旧文件后再尝试。</li>
+</ul>
+<p><strong>Q: 设置壁纸后无法显示怎么办？</strong></p>
+<ul>
+<li>尝试重新启动车辆，确保设置已生效。若问题仍未解决，可覆盖视频文件再尝试。</li>
+</ul>
+<p><strong>Q: 如何恢复默认壁纸？</strong></p>
+<ul>
+<li>删除 <code>/ivres/XUI/wallpaper</code> 文件夹中的自定义视频文件，重启车辆即可恢复默认。</li>
+</ul>
+<h2 id="🔗-推荐工具"><a class="headerlink" href="#🔗-推荐工具"></a>🔗 推荐工具</h2>
+<ul>
+<li>
+<p><strong>文件管理器</strong></p>
+<p>推荐在应用商店下载</p>
+<p><a target="_blank" rel="noopener" href="https://es-file-explorer.en.uptodown.com/android">ES 文件管理器</a><br>
+<a target="_blank" rel="noopener" href="https://maximoff.su/apktool/?lang=en">ApktoolM 下载</a></p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="https://img.xbrooke.cn/file/199753263dae693f8b87d.png"></a><div class="post-copyright__author_name">徐大兵</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fa-solid fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏。</span><ul class="reward-group"><li class="reward-item"><a target="_blank" rel="noopener" href="https://img.xbrooke.cn/file/e811837334f0488479533.jpg"><img class="post-qr-code-img nolazyload" src="https://img.xbrooke.cn/file/e811837334f0488479533.jpg" alt="支付宝" style="border-color: var(--efu-purple)"></a><div class="post-qr-code-desc">支付宝</div></li><li class="reward-item"><a target="_blank" rel="noopener" href="https://img.xbrooke.cn/file/9b6f49a45af6b0de443a0.jpg"><img class="post-qr-code-img nolazyload" src="https://img.xbrooke.cn/file/9b6f49a45af6b0de443a0.jpg" alt="微信" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">微信</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">因为有你们的支持，我才体会到写文章的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://hblog.xbrooke.cn/p/40480.html&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), 'https://hblog.xbrooke.cn/p/40480.html');
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), 'https://hblog.xbrooke.cn/p/40480.html');
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">徐大兵</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>领克车机<span class="tagsPageCount">9</span></span></a><a class="post-meta__tags" href="/tags/%E8%BD%A6%E6%9C%BA%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>车机教程<span class="tagsPageCount">3</span></span></a><a class="post-meta__tags" href="/tags/%E8%A7%86%E9%A2%91%E6%A1%8C%E9%9D%A2/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>视频桌面<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="next-post pull-full"><a href="/p/63131.html"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">🚗 领克 03 CarPlay 音频通道设置经验分享</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fa-solid fa-star"></i>
+                <span>喜欢这篇的人也看了</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">随便逛逛</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/p/60576.html" title="应用商店使用手册">
+                    <img class="cover" src="/img/fm/sd.avif" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">应用商店使用手册</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/p/22189.html" title="领克 OSN 安装设置、商店、启动器一条龙教程！适用于领克 01、03、05">
+                    <img class="cover" src="/img/fm/sz.avif" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">领克 OSN 安装设置、商店、启动器一条龙教程！适用于领克 01、03、05</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fa-solid fa-comment"></i><span> 评论</span><span class="count"> (<span class="twikoo-count"><i class="solitude fa-solid fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="https://img.xbrooke.cn/file/199753263dae693f8b87d.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对osn车机的<b>教程</b>，对数码软件的<b>折腾记录</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">徐大兵</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/xbrooke" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://wechat.xbrooke.cn" title="Wechat"><i class="solitude  fab fa-weixin"></i></a><a class="social-icon" href="/atom.xml" title="RSS"><i class="solitude  fas fa-rss"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fa-solid fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2-This-%E6%8F%90%E4%BE%9B%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-text">感谢@This.提供思维导图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">🛠️ 步骤 1：准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#U%E7%9B%98%E5%AE%89%E8%A3%85"><span class="toc-text">U盘安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="toc-text">在线安装</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%A8-%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E5%BA%94%E7%94%A8%E8%A7%86%E9%A2%91%E5%A3%81%E7%BA%B8"><span class="toc-text">🎨 步骤 2：应用视频壁纸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%84-%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E9%87%8D%E5%90%AF%E8%BD%A6%E8%BE%86"><span class="toc-text">🔄 步骤 3：重启车辆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%8C-%E6%AD%A5%E9%AA%A4-4%EF%BC%9A%E5%B0%86-U-%E7%9B%98%E6%8F%92%E5%85%A5%E8%BD%A6%E8%BE%86"><span class="toc-text">🔌 步骤 4：将 U 盘插入车辆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%82-%E6%AD%A5%E9%AA%A4-5%EF%BC%9A%E8%AE%BF%E9%97%AE%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">📂 步骤 5：访问文件管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-1%EF%BC%9A%E9%80%9A%E8%BF%87%E5%B7%A5%E7%A8%8B%E6%A8%A1%E5%BC%8F%E8%BF%9B%E5%85%A5"><span class="toc-text">方法 1：通过工程模式进入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95-2%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-text">方法 2：使用第三方文件管理器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%96%87%EF%B8%8F-%E6%AD%A5%E9%AA%A4-6%EF%BC%9A%E5%A4%8D%E5%88%B6%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6"><span class="toc-text">🖇️ 步骤 6：复制视频文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%A8-%E6%AD%A5%E9%AA%A4-7%EF%BC%9A%E9%87%8D%E5%90%AF%E8%BD%A6%E8%BE%86"><span class="toc-text">🎨 步骤 7：重启车辆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%9C%A8-%E9%A2%9D%E5%A4%96%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%A3%81%E7%BA%B8%E4%B8%8A%E4%BC%A0%E4%B8%93%E5%8C%BA"><span class="toc-text">✨ 额外功能：壁纸上传专区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%9D%93-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94"><span class="toc-text">❓ 常见问题解答</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%97-%E6%8E%A8%E8%8D%90%E5%B7%A5%E5%85%B7"><span class="toc-text">🔗 推荐工具</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fa-solid fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/p/40480.html" title="🚗 领克01/03/05 视频壁纸设置教程"><div class="thumbnail"><img alt="🚗 领克01/03/05 视频壁纸设置教程" src="/img/fm/zm.avif"></div><div class="content"><span class="title" href="/p/40480.html" title="🚗 领克01/03/05 视频壁纸设置教程">🚗 领克01/03/05 视频壁纸设置教程</span><span class="article-recent_post_categories" href="/p/40480.html">领克OSN</span></div></a><a class="aside-list-item" href="/p/63131.html" title="🚗 领克 03 CarPlay 音频通道设置经验分享"><div class="thumbnail"><img alt="🚗 领克 03 CarPlay 音频通道设置经验分享" src="/img/fm/yp.avif"></div><div class="content"><span class="title" href="/p/63131.html" title="🚗 领克 03 CarPlay 音频通道设置经验分享">🚗 领克 03 CarPlay 音频通道设置经验分享</span><span class="article-recent_post_categories" href="/p/63131.html">领克OSN</span></div></a><a class="aside-list-item" href="/p/54519.html" title="高德地图 7.5 领克版升级：全新仪表盘、HUD支持、智能语音助手"><div class="thumbnail"><img alt="高德地图 7.5 领克版升级：全新仪表盘、HUD支持、智能语音助手" src="https://h.xbrooke.cn/img/2024-11-15/gd75.webp"></div><div class="content"><span class="title" href="/p/54519.html" title="高德地图 7.5 领克版升级：全新仪表盘、HUD支持、智能语音助手">高德地图 7.5 领克版升级：全新仪表盘、HUD支持、智能语音助手</span><span class="article-recent_post_categories" href="/p/54519.html">领克OSN</span></div></a><a class="aside-list-item" href="/p/45384.html" title="如何用 GitHub 和 Netlify 打造稳定的图床？"><div class="thumbnail"><img alt="如何用 GitHub 和 Netlify 打造稳定的图床？" src="/img/fm/myimg.avif"></div><div class="content"><span class="title" href="/p/45384.html" title="如何用 GitHub 和 Netlify 打造稳定的图床？">如何用 GitHub 和 Netlify 打造稳定的图床？</span><span class="article-recent_post_categories" href="/p/45384.html">原创代码</span></div></a><a class="aside-list-item" href="/p/32992.html" title="火爆来袭！Follow——你绝不能错过的下一代信息浏览器！"><div class="thumbnail"><img alt="火爆来袭！Follow——你绝不能错过的下一代信息浏览器！" src="/img/fm/Follow.avif"></div><div class="content"><span class="title" href="/p/32992.html" title="火爆来袭！Follow——你绝不能错过的下一代信息浏览器！">火爆来袭！Follow——你绝不能错过的下一代信息浏览器！</span><span class="article-recent_post_categories" href="/p/32992.html">软件</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2024 By&nbsp;<a class="footer-bar-link" href="/">徐大兵</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index" alt="粤ICP备2022068881号">粤ICP备2022068881号</a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="solitude fa-solid fa-copyright"></i><i class="solitude fa-brands fa-creative-commons-by"></i><i class="solitude fa-brands fa-creative-commons-nc"></i><i class="solitude fa-brands fa-creative-commons-nd"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.1.7"></script><script src="/js/main.js?v=2.1.7"></script><script src="/js/third_party/waterfall.min.js?v=2.1.7"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/third_party/universe.min.js?v=2.1.7"></script><script>dark()
+</script><script src="/js/tw_cn.js?v=2.1.7"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    utils.wrap(item, 'div', {class: 'katex-wrap'})
+  })
+})();
+</script></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.4.0/color-thief.min.js"></script><script src="/js/covercolor/local.js?v=2.1.7"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.74.1/instantsearch.production.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/5.9.1/algoliasearch.umd.min.js"></script><script src="/hot/hot.js"></script><script src="/schedule/schedule.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script> <script>LA.init({id:"3J7I70Eb4ZldC5hz",ck:"3J7I70Eb4ZldC5hz"})</script><div class="js-pjax"><script>(() => {
+    const getCount = () => {
+        const ele = document.querySelectorAll('.twikoo-count')
+        if (!ele) return
+        twikoo.getCommentsCount({
+            envId: 'https://twikoo.xbrooke.cn/.netlify/functions/twikoo',
+            region: '',
+            urls: [window.location.pathname],
+            includeReply: false
+        }).then(res => {
+            ele.forEach(item => item.textContent = res[0].count)
+        }).catch(err => {
+            console.error(err)
+        })
+    }
+    const init = () => {
+        twikoo.init(Object.assign({
+            el: '#twikoo-wrap',
+            envId: 'https://twikoo.xbrooke.cn/.netlify/functions/twikoo',
+            region: '',
+            path: window.location.pathname,
+            onCommentLoaded: () => {
+                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+            }
+        }, null))
+
+         && getCount()
+        sco.owoBig({
+            body: '.OwO-body',
+            item: '.OwO-items li'
+        })
+
+        true && barrageTwikoo()
+    }
+
+    const loadTwikoo = () => {
+        if (typeof twikoo === 'object') setTimeout(init,0)
+        else utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.39/twikoo.all.min.js').then(init)
+    }
+
+    if ('Twikoo' === 'Twikoo' || true) {
+        if (true) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+        else loadTwikoo()
+    } else {
+        window.loadTwoComment = loadTwikoo
+    }
+})()
+</script><script>async function barrageTwikoo() {
+    await fetch("https://twikoo.xbrooke.cn/.netlify/functions/twikoo", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            event: "COMMENT_GET",
+            accessToken: "a970a8ffae50793ebeb9e919994b47b",
+            url: window.location.pathname
+        })
+    }).then(async res => {
+        if (!res.ok) throw new Error("HTTP error! status: " + res.status)
+        const data = await res.json();
+        const init = () => {
+            initializeCommentBarrage((data.data).map(item => Object.assign({
+                content: item.comment,
+                nick: item.nick,
+                mailMd5: item.mailMd5,
+                id: item.id
+            })))
+        }
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=2.1.7').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script><script defer pjax src="https://cdnjs.cloudflare.com/ajax/libs/busuanzi/2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/')">领克车机</a><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/Hexo/')">Hexo</a></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=2.1.7"></script><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["p/40480.html","p/63131.html","p/54519.html","p/45384.html","p/32992.html","p/5189.html","p/18280.html","p/17545.html","p/19423.html","p/ab29.html","p/1676.html","p/53121.html","p/28607.html","p/60576.html","p/22189.html","p/da7.html"];function toRandomPost(){ pjax.loadUrl(GLOBAL_CONFIG.root+posts[Math.floor(Math.random()*posts.length)]); }</script>
