@@ -136,7 +136,7 @@ initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
     covercolor: {
         enable: true
     },
-    comment: {"avatar":"https://gravatar.com/avatar","commentBarrage":true},
+    comment: {"avatar":"https://cravatar.cn","commentBarrage":true},
     lightbox: 'mediumZoom',
     post_ai: false,
     right_menu: false,
@@ -163,7 +163,7 @@ initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
     }
     let ls = []
 
-    await fetch('https://twikoo.xbrooke.cn/.netlify/functions/twiko', {
+    await fetch('https://twikoo.xbrooke.cn/.netlify/functions/twikoo', {
         method: "POST",
         body: JSON.stringify({
             "event": "GET_RECENT_COMMENTS",
@@ -269,7 +269,7 @@ document.addEventListener('pjax:error', (e) => {
     }
 })</script><!-- google adsense--><!-- search--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"><a class="tag-list" href="javascript:void(0);" onclick="pjax.loadUrl('/tags/%E9%A2%86%E5%85%8B%E8%BD%A6%E6%9C%BA/')">领克车机</a></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=2.1.10"></script><!-- Tianli-Talk--><!-- music--></body></html>
         <script>
-            const posts = ["p/17545.html","p/32992.html","p/da7.html","p/5189.html","p/45384.html","p/63131.html","p/60576.html","p/53121.html","p/19423.html","p/40480.html","p/18280.html","p/22189.html","p/1676.html","p/ab29.html","p/28607.html","p/54519.html"];
+            const posts = ["p/40480.html","p/63131.html","p/54519.html","p/45384.html","p/32992.html","p/5189.html","p/18280.html","p/17545.html","p/19423.html","p/ab29.html","p/1676.html","p/53121.html","p/28607.html","p/60576.html","p/22189.html","p/da7.html"];
             function toRandomPost() {
                 const randomPost = posts[Math.floor(Math.random() * posts.length)];
                 pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
