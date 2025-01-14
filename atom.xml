@@ -6,7 +6,7 @@
   <link href="https://hblog.xbrooke.cn/atom.xml" rel="self"/>
   
   <link href="https://hblog.xbrooke.cn/"/>
-  <updated>2024-11-19T15:17:51.881Z</updated>
+  <updated>2025-01-14T14:15:27.445Z</updated>
   <id>https://hblog.xbrooke.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>飞牛私有云OS通过Docker安装CloudDrive2小白教程</title>
+    <link href="https://hblog.xbrooke.cn/p/60744.html"/>
+    <id>https://hblog.xbrooke.cn/p/60744.html</id>
+    <published>2025-01-14T14:04:56.000Z</published>
+    <updated>2025-01-14T14:15:27.445Z</updated>
+    
+    
+    <summary type="html">通过 Docker 在飞牛私有云OS上安装并配置 CloudDrive2，实现云存储与本地文件的高效管理与映射。</summary>
+    
+    
+    
+    <category term="飞牛私有云OS" scheme="https://hblog.xbrooke.cn/categories/%E9%A3%9E%E7%89%9B%E7%A7%81%E6%9C%89%E4%BA%91OS/"/>
+    
+    
+    <category term="软件教程" scheme="https://hblog.xbrooke.cn/tags/%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="飞牛教程" scheme="https://hblog.xbrooke.cn/tags/%E9%A3%9E%E7%89%9B%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="CloudDrive2" scheme="https://hblog.xbrooke.cn/tags/CloudDrive2/"/>
+    
+  </entry>
   
   <entry>
     <title>🚗 领克01/03/05 视频壁纸设置教程</title>
